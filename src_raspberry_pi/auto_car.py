@@ -112,7 +112,7 @@ if(config_no_motor == 0) :
   GPG.set_motor_dps(GPG.MOTOR_RIGHT, -1*r_speed)
 
 currentStatus[0] = 0.5		# speed
-currentStatus[1] = 0.0          # angle difference 
+currentStatus[1] = 0.0    # angle difference 
 currentStatus[2] = 0.0		# -60, 0.0 = no blocking, 1.0 = very close
 currentStatus[3] = 0.0		# -30  
 currentStatus[4] = 0.0		#  0
@@ -129,13 +129,7 @@ while (1) :
       currentStatus[i+2] = 1.0 - dist[i]/no_object_lidar
 
   #angle
-  #currentStatus[1] = (target_angle - current_angle)/180.0
-  if(iteration <100) :
-    currentStatus[1] = 0.0
-  elif (iteration <140) and (iteration>=100) :
-    currentStatus[1] = -1.0
-  else :
-    currentStatus[1] = 0.0
+  currentStatus[1] = (target_angle - current_angle)/180.0
 
   # feed forward
   nnOutput = feedforward(currentStatus)
