@@ -51,7 +51,7 @@ public class Neural {
 		catch (IOException e) {
 			e.printStackTrace();
 		}
-	//	System.out.println(weights[0][25][3]);
+		System.out.println(weights[0][25][3]);
 	}
 	
 	public void writeWeights(){ //via file
@@ -111,17 +111,10 @@ public class Neural {
 	}
 	
 	public static float [] feedforward(float[] input) { // original
-		input[0] = 0.5F;
-		input[1] = 0.02673F;
-		input[2] = 0.0F;
-		input[3] = 0.0F;
-		input[4] = 0.0F;
-		input[5] = 0.0F;
-		input[6] = 0.0F;
 
 		for(int i=0;i<input.length;i++){
 			layers[0][i]=input[i];
-			System.out.println(input[i]);
+			//System.out.println(input[i]);
 		}
 
 		// print inputs
@@ -137,8 +130,8 @@ public class Neural {
 			}
 		}
 		// print outputs
-		for(int i=0;i<numOfNeurons[2];i++) System.out.println(" O "+layers[2][i]); 
-		System.exit(1);
+		//for(int i=0;i<numOfNeurons[2];i++) System.out.println(" O "+layers[2][i]); 
+		//System.exit(1);
 		return(layers[2]);
 	}
 

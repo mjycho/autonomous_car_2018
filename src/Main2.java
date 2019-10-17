@@ -57,7 +57,7 @@ public class Main2 extends JPanel implements ActionListener, MouseListener {
 		}
 
 		// Set up display
-		System.out.println("SMART CAR 13");
+		System.out.println("SMART CAR 14 - Main2");
 		JFrame frame = new JFrame("SMART CAR 13");
 		frame.setVisible(true);
 		frame.setSize(1920, 1000);

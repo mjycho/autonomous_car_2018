@@ -76,7 +76,7 @@ public class Main extends JPanel implements ActionListener, MouseListener{
 		else neural.initWeight();
 
 		// Set up display
-		System.out.println("SMART CAR 14");
+		System.out.println("SMART CAR 14 - Main");
 		JFrame frame = new JFrame("SMART CAR 14");
 		frame.setSize(1920, 1000);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -100,17 +100,17 @@ public class Main extends JPanel implements ActionListener, MouseListener{
 					for(int j=0;j<numInputLayer;j++) System.out.printf(" %.6f", currentStatus[j]);
 				}
 
-				if(i == 0) {
-					System.out.printf("I");
-					for(int j=0;j<numInputLayer;j++) System.out.printf(" %.6f", currentStatus[j]);
-					System.out.printf("\n");
-				}
+				//if(i == 0) {
+				//	System.out.printf("I");
+				//	for(int j=0;j<numInputLayer;j++) System.out.printf(" %.6f", currentStatus[j]);
+				//	System.out.printf("\n");
+				//}
 				nnOutput = Neural.feedforward(currentStatus);
-				if(i == 0) {
-					System.out.printf("O");
-					for(int j=0;j<numOutputLayer;j++) System.out.printf(" %.6f", nnOutput[j]);
-					System.out.printf("\n");
-				}
+				//if(i == 0) {
+				//	System.out.printf("O");
+				//	for(int j=0;j<numOutputLayer;j++) System.out.printf(" %.6f", nnOutput[j]);
+				//	System.out.printf("\n");
+				//}
 				
 				if(c.tdLearn) {
 					for(int j=0;j<numInputLayer;j++) {
@@ -930,18 +930,18 @@ public class Main extends JPanel implements ActionListener, MouseListener{
 			cars[carNum].turnRight(2.0f);
 			maxQRL = nnOutput[3];
 			maxNodeRL = 3;
-			if(carNum==0) System.out.print("RRR\n");
+			//if(carNum==0) System.out.print("RRR\n");
 			if(c.debug) System.out.print("  right");
 		} else if(max_outputRL==4) {
 			cars[carNum].turnLeft(2.0f);
 			maxQRL = nnOutput[4];
 			maxNodeRL = 4;
 			if(c.debug) System.out.print("  left");
-			if(carNum ==0) System.out.print("LLL\n");
+			//if(carNum ==0) System.out.print("LLL\n");
 		} else {
 			maxQRL = nnOutput[5];
 			maxNodeRL = 5;
-			if(carNum==0) { System.out.print("NNN\n"); }
+			//if(carNum==0) { System.out.print("NNN\n"); }
 			if(c.debug) System.out.print("  rl_none");
 		}	
 

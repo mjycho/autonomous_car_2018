@@ -69,8 +69,8 @@ public class c {
 	public static final int 	LIDARLength 		= 120;
 	public static final int 	numOfHidden 		= 500; 
 	public static final int 	numOfDetectLine		= 5;
-	public static final float 	maxSpeed				= 1.0f;	
-	public static final float 	minSpeed				= 0.5f;
+	public static final float 	maxSpeed			= 1.0f;	
+	public static final float 	minSpeed			= 0.5f;
 	
 	public static final int 	carBaseAngle [][]   = { // first index : car type, second index : current section where car is.
 													    // values : base angle at each section. Needs 25 numbers.
